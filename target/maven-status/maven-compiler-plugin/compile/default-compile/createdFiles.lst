@@ -1,6 +1,6 @@
 consumidor\Consumer.class
 publicador\Publisher.class
-conexion\despliegueJMS\App.class
+manager\DirectorDeOrquesta.class
 conexion\despliegueJMS\Process.class
 conexion\despliegueJMS\ProcessRepository.class
 conexion\despliegueJMS\MiConexionMongo.class
