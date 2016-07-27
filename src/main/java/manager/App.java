@@ -12,11 +12,13 @@ public class App {
 	public static void main(String[] args) {
 		ApplicationContext context = new AnnotationConfigApplicationContext(PoolDeConfiguracion.class);
 	    ThreadPoolTaskExecutor taskExecutor = (ThreadPoolTaskExecutor) context.getBean("taskExecutor");
-	    Publisher Task001 = 	(Publisher) context.getBean("miMetodo1");
-	    taskExecutor.execute((Runnable) Task001);
+	    //Publisher Task001 = 	(Publisher) context.getBean("publicador.Publisher");
+	    Publisher publicador = new Publisher(); 
+	    taskExecutor.execute((Runnable)publicador );
 
-	    Consumer Task002 = (Consumer) context.getBean("miMetodo2");
-	    taskExecutor.execute((Runnable) Task002);
+	    //Consumer Task002 = (Consumer) context.getBean("Consumer");
+	    Consumer consumidor = new Consumer();
+	    taskExecutor.execute((Runnable) consumidor);
 	    for (;;) {
 			int count = taskExecutor.getActiveCount();
 			System.out.println("Threads Activos : " + count);

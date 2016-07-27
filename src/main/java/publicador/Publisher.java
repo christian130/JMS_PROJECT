@@ -20,8 +20,12 @@ import org.apache.qpid.amqp_1_0.jms.impl.ConnectionFactoryImpl;
 import org.apache.qpid.amqp_1_0.jms.impl.QueueImpl;
 import org.apache.qpid.amqp_1_0.jms.impl.TopicImpl;
 import org.springframework.context.annotation.Bean;
-
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+@Component
+@Scope("prototype")
 public class Publisher implements Runnable {
+	
 	@Bean
     public static void miMetodo01() throws Exception {
         //com.datatraffic.parseo.gui.ParseoPrincipal.main(args);

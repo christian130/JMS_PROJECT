@@ -18,15 +18,18 @@ import org.apache.qpid.amqp_1_0.jms.impl.QueueImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import conexion.despliegueJMS.MiConexionMongo;
 import conexion.despliegueJMS.Process;
 import conexion.despliegueJMS.ProcessRepository;
-
+@Component
+@Scope("prototype")
 public class Consumer implements Runnable {
 	
 	@Bean
-    public static void miMetodo2() throws JMSException   {
+    public static void miMetodo02() throws JMSException   {
     	
     	ApplicationContext  ctx= new AnnotationConfigApplicationContext(MiConexionMongo.class);
     	ProcessRepository proRepository  = ctx.getBean(ProcessRepository.class);
@@ -117,7 +120,7 @@ public class Consumer implements Runnable {
 
 	public void run() {
 		try {
-			Consumer.miMetodo2();
+			Consumer.miMetodo02();
 		} catch (JMSException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
