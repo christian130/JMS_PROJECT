@@ -71,7 +71,7 @@ public class Consumer implements Runnable {
             System.out.println("estoy trayendome los mensajes del QUEUE" +receive.getJMSMessageID()+" tipo " + receive.getStringProperty("process_id") );
            // Process miproceso = new Process();
             //miproceso.setStatus(receive.getStringProperty("process_id"));
-          proRepository.save(new Process().changeStatus(receive.getStringProperty("process_id"), "Por hacer..."));    
+          proRepository.save(new Process().changeStatus(receive.getStringProperty("process_id"), "XXX"));    
             
         }
         //consumer.close();
