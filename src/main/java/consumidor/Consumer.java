@@ -17,17 +17,16 @@ import org.apache.qpid.amqp_1_0.jms.impl.ConnectionFactoryImpl;
 import org.apache.qpid.amqp_1_0.jms.impl.QueueImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
 
 import conexion.despliegueJMS.MiConexionMongo;
-import conexion.despliegueJMS.ProcessRepository;
 import conexion.despliegueJMS.Process;
-class Consumer {
+import conexion.despliegueJMS.ProcessRepository;
+
+public class Consumer implements Runnable {
 	
-	
-    public static void main(String []args) throws JMSException   {
-		
-			
-		
+	@Bean
+    public static void miMetodo2() throws JMSException   {
     	
     	ApplicationContext  ctx= new AnnotationConfigApplicationContext(MiConexionMongo.class);
     	ProcessRepository proRepository  = ctx.getBean(ProcessRepository.class);
@@ -114,6 +113,18 @@ class Consumer {
         else
             return defaultValue;
     }
+
+
+	public void run() {
+		try {
+			Consumer.miMetodo2();
+		} catch (JMSException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// TODO Auto-generated method stub
+		
+	}
 
 	
 

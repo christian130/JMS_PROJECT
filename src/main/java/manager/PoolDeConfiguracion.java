@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 @Configuration
-@ComponentScan(basePackages = "com.mkyong.thread")
+@ComponentScan(basePackages = "manager")
 public class PoolDeConfiguracion {
 
 	@Bean

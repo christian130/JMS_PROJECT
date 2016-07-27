@@ -19,15 +19,11 @@ import javax.jms.TextMessage;
 import org.apache.qpid.amqp_1_0.jms.impl.ConnectionFactoryImpl;
 import org.apache.qpid.amqp_1_0.jms.impl.QueueImpl;
 import org.apache.qpid.amqp_1_0.jms.impl.TopicImpl;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
 
-import conexion.despliegueJMS.MiConexionMongo;
-import conexion.despliegueJMS.ProcessRepository;
-
-class Publisher {
-
-    public static void main(String []args) throws Exception {
+public class Publisher implements Runnable {
+	@Bean
+    public static void miMetodo01() throws Exception {
         //com.datatraffic.parseo.gui.ParseoPrincipal.main(args);
     	//nnew String [] {"1", "2",  "3"}    	
     	String[] miArreglo= new String [] {"5796b8b6d0a9ea592d7be863","5796b8b6d0a9ea592d7be864","5796b8b6d0a9ea592d7be865","5796b8b6d0a9ea592d7be866","5796b8b6d0a9ea592d7be867","5796b8b6d0a9ea592d7be868","5796b8b6d0a9ea592d7be869","5796b8b6d0a9ea592d7be86a","5796b8b6d0a9ea592d7be86b","5796b8b6d0a9ea592d7be86c","5796b8b6d0a9ea592d7be86d","5796b8b6d0a9ea592d7be86e","5796b8b6d0a9ea592d7be86f","5796b8b6d0a9ea592d7be870","5796b8b6d0a9ea592d7be871"};
@@ -37,8 +33,8 @@ class Publisher {
         String host = env("APOLLO_HOST", "127.0.0.1");
         //String host = env("APOLLO_HOST", "192.168.0.242");
         int port = Integer.parseInt(env("APOLLO_PORT", "7102"));
-        String destination = arg(args, 0, "topic://testspring");
-        destination="queue://testspring";
+      //  String destination = arg(args, 0, "topic://testspring");
+        String destination="queue://testspring";
         destination="queue://event";
         destination="queue://tracksporter";
 
@@ -113,5 +109,15 @@ class Publisher {
         else
             return defaultValue;
     }
+
+	public void run() {
+		// TODO Auto-generated method stub
+		try {
+			Publisher.miMetodo01();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 }

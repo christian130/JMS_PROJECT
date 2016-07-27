@@ -11,15 +11,15 @@ public class DirectorDeOrquesta implements Runnable{
 	
 	public void run() {
 		
-		/*System.out.println();
+		System.out.println();
 		
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		aqui tengo que colocar todo el
-		System.out.println();*/
+		//aqui tengo que colocar todo el
+//		System.out.println();
 
 	}
 
