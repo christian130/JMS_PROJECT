@@ -1,29 +1,20 @@
 package manager;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
-import consumidor.Consumer;
-import publicador.Publisher;
-
 public class App {
-	@Autowired
-	static Publisher publisher;
-	@Autowired 
-	static Consumer consumer;
-	public static void main(String[] args) {
-		
+
+
+	public static void main(String[] args) throws Exception {
 		ApplicationContext context = new AnnotationConfigApplicationContext(PoolDeConfiguracion.class);
 	    ThreadPoolTaskExecutor taskExecutor = (ThreadPoolTaskExecutor) context.getBean("taskExecutor");
-	    Publisher Task001 = 	publisher;	    
-	    taskExecutor.execute(Task001 );
-	    Consumer Task002 = consumer;
-	    taskExecutor.execute( Task002);
-	    for (;;) {
+	    DirectorDeOrquesta printTask2 = (DirectorDeOrquesta)  context.getBean("DirectorDeOrquesta");
+	    taskExecutor.execute(printTask2);
+		for (;;) {
 			int count = taskExecutor.getActiveCount();
-			System.out.println("Threads Activos : " + count);
+			System.out.println("Active Threads : " + count);
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
@@ -34,7 +25,8 @@ public class App {
 				break;
 			}
 		}
+		
+		}
 
 	}
 
-}

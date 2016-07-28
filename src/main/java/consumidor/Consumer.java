@@ -28,6 +28,8 @@ import conexion.despliegueJMS.ProcessRepository;
 @Scope("prototype")
 public class Consumer implements Runnable {
 	
+	
+	
 	@Bean
     public static void miMetodo02() throws JMSException   {
     	
