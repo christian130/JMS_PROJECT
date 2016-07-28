@@ -1,8 +1,0 @@
-consumidor\Consumer.class
-conexion\despliegueJMS\Process.class
-conexion\despliegueJMS\ProcessRepository.class
-manager\PoolDeConfiguracion.class
-publicador\Publisher.class
-manager\DirectorDeOrquesta.class
-manager\App.class
-conexion\despliegueJMS\MiConexionMongo.class
