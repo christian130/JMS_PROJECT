@@ -8,6 +8,8 @@ package apolloproducer.datatraffic.com.co;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import javax.jms.Connection;
 import javax.jms.DeliveryMode;
@@ -22,7 +24,8 @@ import org.apache.qpid.amqp_1_0.jms.impl.TopicImpl;
 
 class Publisher {
 	final static String[] arguments = new String[] {"123"};
-    public static void main(String []args) throws Exception {
+	final public static int numeroConsumidores=3;
+    public static Runnable main(String []args) throws Exception {
     	System.out.println("aqui estoy ya ready para enviar");
         //com.datatraffic.parseo.gui.ParseoPrincipal.main(args);
     	//nnew String [] {"1", "2",  "3"}    	
@@ -95,11 +98,29 @@ class Publisher {
         producer.close();
         
         //producer.send(session.createTextMessage("SHUTDOWN"));
-        Thread.sleep(1000*3);
+        //Thread.sleep(1000*3);
         connection.close();
         //connection.stop();
-        Consumer.main(arguments);
-        System.exit(0);
+        //Consumer.main(arguments);
+       // ExecutorService executor = Executors.newFixedThreadPool( numeroConsumidores );
+        
+        //for(int i=1;  i<= numeroConsumidores;i++){
+        // System.out.println("estoy en el thread");
+         //Thread threadconsumidor = new Thread();
+        // executor.execute(Consumer.main(arguments));
+         //executor.shutdownNow();
+         //if (i==numeroConsumidores){executor.shutdownNow();}
+         /*switch (i) {
+		case numeroConsumidores:
+			executor.shutdownNow();
+			break;
+
+		
+		}*/
+        //}
+		return null;
+       
+        //System.exit(0);
         
     }
 

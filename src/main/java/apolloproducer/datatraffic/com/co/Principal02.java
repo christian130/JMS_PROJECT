@@ -15,99 +15,22 @@ public class Principal02 {
 	
 	final static String[] arguments = new String[] {"123"};
 	public static void main(String[] args) throws Exception {
-		ExecutorService threads = new ExecutorService() {
-			
-			@Override
-			public void execute(Runnable command) {
-				// TODO Auto-generated method stub
-				
-				
-			}
-			
-			@Override
-			public <T> Future<T> submit(Runnable task, T result) {
-				// TODO Auto-generated method stub
-				return null;
-			}
-			
-			@Override
-			public Future<?> submit(Runnable task) {
-				// TODO Auto-generated method stub
-				return null;
-			}
-			
-			@Override
-			public <T> Future<T> submit(Callable<T> task) {
-				// TODO Auto-generated method stub
-				return null;
-			}
-			
-			@Override
-			public List<Runnable> shutdownNow() {
-				// TODO Auto-generated method stub
-				return null;
-			}
-			
-			@Override
-			public void shutdown() {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public boolean isTerminated() {
-				// TODO Auto-generated method stub
-				return false;
-			}
-			
-			@Override
-			public boolean isShutdown() {
-				// TODO Auto-generated method stub
-				return false;
-			}
-			
-			@Override
-			public <T> T invokeAny(Collection<? extends Callable<T>> tasks, long timeout, TimeUnit unit)
-					throws InterruptedException, ExecutionException, TimeoutException {
-				// TODO Auto-generated method stub
-				return null;
-			}
-			
-			@Override
-			public <T> T invokeAny(Collection<? extends Callable<T>> tasks) throws InterruptedException, ExecutionException {
-				// TODO Auto-generated method stub
-				return null;
-			}
-			
-			@Override
-			public <T> List<Future<T>> invokeAll(Collection<? extends Callable<T>> tasks, long timeout, TimeUnit unit)
-					throws InterruptedException {
-				// TODO Auto-generated method stub
-				return null;
-			}
-			
-			@Override
-			public <T> List<Future<T>> invokeAll(Collection<? extends Callable<T>> tasks) throws InterruptedException {
-				// TODO Auto-generated method stub
-				return null;
-			}
-			
-			@Override
-			public boolean awaitTermination(long timeout, TimeUnit unit) throws InterruptedException {
-				// TODO Auto-generated method stub
-				return false;
-			}
-		};
+		
 		
 		new Runnable() {
 			public void run() {
 				try {
 					 //while(!Thread.interrupted()) {
 						    /* Do something. */
-						 Publisher.main(arguments);
+					Thread t = new Thread(Publisher.main(arguments));
+					t.setDaemon(true);
+						 //Publisher.main(arguments);
 						//  }
 					 //Thread.currentThread().interrupt();
-					
+					t.interrupt();
+					Thread t2 = new Thread(Consumer.main(arguments));
+					t2.setDaemon(true);
+					t2.interrupt();
 					
 				} catch (JMSException e) {
 					// TODO Auto-generated catch block
@@ -118,8 +41,8 @@ public class Principal02 {
 				}
 			}
 		}.run();
-		
-		
+		//System.out.println(Thread.currentThread().getName());
+		//System.exit(0);
 
 		// ...
 		// Tell threads to finish off.

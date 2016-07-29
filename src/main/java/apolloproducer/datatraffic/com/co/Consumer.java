@@ -24,7 +24,7 @@ import conexion.ProcessRepository;
 public class Consumer implements Runnable {
 	
 	
-    public static void main(String []args) throws JMSException   {
+    public static Runnable main(String []args) throws JMSException   {
     	System.out.println("ahora estoy ya ready para recoger");
     	ApplicationContext  ctx= new AnnotationConfigApplicationContext(MiConexionMongo.class);
     	ProcessRepository proRepository  = ctx.getBean(ProcessRepository.class);
