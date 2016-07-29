@@ -23,8 +23,8 @@ import conexion.Process;
 import conexion.ProcessRepository;
 public class Consumer implements Runnable {
 	
-	
-    public static Runnable main(String []args) throws JMSException   {
+	 final static String[] arguments = new String[] {"123"};
+    public Runnable main(String []args) throws JMSException   {
     	System.out.println("ahora estoy ya ready para recoger");
     	ApplicationContext  ctx= new AnnotationConfigApplicationContext(MiConexionMongo.class);
     	ProcessRepository proRepository  = ctx.getBean(ProcessRepository.class);
@@ -58,9 +58,9 @@ public class Consumer implements Runnable {
         //MessageProducer producer = session.createProducer(dest);
         MessageConsumer consumer= session.createConsumer(dest);
         //
-        int consumir= 10;
+        int consumir= 15;
         Message receive = null;
-        for (int i = 0; true ; i++) {
+        for (int i = 0;  ; i++) {
             receive= consumer.receive();
             receive.acknowledge();	
             System.out.println("estoy trayendome los mensajes del QUEUE" +receive.getJMSMessageID()+" tipo " + receive.getStringProperty("process_id") );
@@ -69,7 +69,6 @@ public class Consumer implements Runnable {
            proRepository.save(new Process().changeStatus(receive.getStringProperty("process_id"), "O.K."));    
             
         }
-        //consumer.close();
         
         
         
@@ -108,6 +107,12 @@ public class Consumer implements Runnable {
   
 	@Override
 	public void run() {
+		try {
+			new Consumer().main(arguments);
+		} catch (JMSException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		// TODO Auto-generated method stub
 		
 	}

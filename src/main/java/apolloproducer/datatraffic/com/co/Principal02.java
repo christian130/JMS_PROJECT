@@ -1,28 +1,46 @@
 package apolloproducer.datatraffic.com.co;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
+import java.util.concurrent.Executors;
 
-import javax.jms.JMSException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import conexion.MiConexionMongo;
+import conexion.ProcessRepository;
 
 public class Principal02 {
-	
+	 public static int numeroConsumidores=10;
 	final static String[] arguments = new String[] {"123"};
 	public static void main(String[] args) throws Exception {
+		ApplicationContext  ctx= new AnnotationConfigApplicationContext(MiConexionMongo.class);
+	     ProcessRepository proRepository  = ctx.getBean(ProcessRepository.class);
+	  ExecutorService executor = Executors.newFixedThreadPool( numeroConsumidores );
+	  
+	  for(int i=1;  i<= numeroConsumidores;i++){
+	   
+	   Thread threadconsumidor = new Thread(new Consumer());
+	   executor.execute(threadconsumidor);
+	  
+	  }
+	  while (true) {
+	   System.out.println("procesos consumidores ");
+	   try {
+	    Thread.sleep( 10000 );
+	   } catch (InterruptedException e) {
+	    // TODO Auto-generated catch block
+	    e.printStackTrace();
+	   }    
+	  }
+	  
+
 		
-		
-		new Runnable() {
+		/*new Runnable() {
 			public void run() {
-				try {
+				try {*/
 					 //while(!Thread.interrupted()) {
 						    /* Do something. */
-					Thread t = new Thread(Publisher.main(arguments));
+				/*	Thread t = new Thread(Publisher.main(arguments));
 					t.setDaemon(true);
 						 //Publisher.main(arguments);
 						//  }
@@ -40,7 +58,7 @@ public class Principal02 {
 					e.printStackTrace();
 				}
 			}
-		}.run();
+		}.run();*/
 		//System.out.println(Thread.currentThread().getName());
 		//System.exit(0);
 
