@@ -16,22 +16,8 @@
             <artifactId>qpid-amqp-1-0-client-jms</artifactId>
             <version>0.26</version>
         </dependency>
-        <!--<dependency>
-            <groupId>com.datatraffic</groupId>
-            <artifactId>datatraffic.com.parseo</artifactId>
-            <version>1.0.2-SNAPSHOT</version>
-            <type>jar</type>
-        </dependency>-->
-        <!--<dependency>
-            <groupId>com.datatraffic</groupId>
-            <artifactId>datatraffic.com.procesadormongodb</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-        </dependency>-->
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>9.2-1004-jdbc41</version>
-        </dependency>
+ 
+ 
 		 <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
@@ -44,27 +30,7 @@
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
     
-    <!-- Repositorios 
-    <repositories>
-        <repository>
-            <id>archiva.internal</id>
-            <name>Repositorio local </name>
-            <layout>default</layout>
-            <url>http://192.168.0.242:8080/repository/internal/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>archiva.snapshots</id>
-            <name>Repositorio local</name>
-            <layout>default</layout>
-            <url>http://192.168.0.242:8080/repository/snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>-->
+ 
 	
 	 <build>
         <plugins>
