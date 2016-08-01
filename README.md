@@ -84,7 +84,7 @@ Implementacion
                            25 de julio de 2016   
   --------------------- -- --------------------- --
 
-<span id="page3" class="anchor"></span>
+
 
 -   **Instalar Librerias**
 
