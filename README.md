@@ -35,6 +35,7 @@ Implementacion
 > Para compilar el programa se es necesario obtener el ultimo JDK 1.8,
 > para ejecutarlo simplemente basta con el JRE. El codigo Fuente de la
 > aplicacion esta en el drive…
+>> en el momento de realizar esta guia, no existia un repositorio, en orden de compilar las fuentes que estan en este documento por favor siga abajo en el apartado compilar fuentes
 
   ----------------- -- ---------------------------------------------------------------
   Apollo producer      Estas son las fuentes iniciales de la aplicacion (tambien se pueden obtener con el primer commit usando la interfaz grafica de bitbucket)
