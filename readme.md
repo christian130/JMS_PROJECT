@@ -39,7 +39,7 @@
 
 > **Probado En:**
 >
-> Windows 7 professional edition 32bits
+> Windows 7 professional Edition 32bits
 
 2.  **Librerias**
 
