@@ -1,27 +1,22 @@
 ------------------- ---------------------------------- ---------------------------------------------------------------------------------------------------------------------------- ---
   
 
-[***1***](#page2)
+[***1***]
 
-[***Implementación***](#page2) 
+[***Implementación***]
 
-[*1.1*](#page2)
+[*Vista General*]
 
-[*Vista General*](#page2)
+[*Librerías*]
 
-[*1.2*](#page2)
-
-[*Lista de Librerías Requeridas*](#page2)
-
- **2** **Instalar Librerías**           **3** [*2.1*](#page3)
+ **2** **Instalar Librerías** 
   
-[*Apollo Broker*](#page3)  [*2.2*](#page4)
+[*Apollo Broker*]  
 
-[*2.3*](#page5) 
+[*Levantar JMS ApolloMQ*]
 
-[*2.4*](#page6) 
+ **3** **Compilar Fuentes** 
 
-[*Levantar la aplicación*](#page6)
   ------------------- ---------------------------------- ---------------------------------------------------------------------------------------------------------------------------- ---
 
   -- -- --
@@ -43,11 +38,12 @@ Implementacion
 > Para compilar el programa se es necesario obtener el ultimo JDK 1.8,
 > para ejecutarlo simplemente basta con el JRE. El codigo Fuente de la
 > aplicacion esta en el drive…
+>> en el momento de realizar esta guia, no existia un repositorio, en orden de compilar las fuentes que estan en este documento por favor siga abajo en el apartado compilar fuentes
 
   ----------------- -- ---------------------------------------------------------------
-  Apollo producer      Estas son las fuentes de la aplicacion
+  Apollo producer      Estas son las fuentes iniciales de la aplicacion (tambien se pueden obtener con el primer commit usando la interfaz grafica de bitbucket)
                        
-                       https://drive.google.com/open?id=0Bz-I92ggYYjkNm1DWmQ2a2d5cFE
+                      [ https://drive.google.com/open?id=0Bz-I92ggYYjkNm1DWmQ2a2d5cFE](Link URL)
   ----------------- -- ---------------------------------------------------------------
 
 > **Probado En:**
@@ -56,7 +52,7 @@ Implementacion
 
 2.  **Librerias**
 
-> Las siguientes librerias que estan en rojo requieren atencion para su
+> Las siguientes son una lista de librerias que estan en rojo requieren atencion para su
 > instalacion, las demas se instalan automaticamente via POM…
 
   --------------- ------------- ---------------------------------------------------------------------------------
@@ -68,7 +64,7 @@ Implementacion
 
   Apollo Broker   V 1.7.1       Esta es una carpeta ya compilada para windows y linux con el nombre de Agente02
                                 
-                                https://drive.google.com/open?id=0Bz-I92ggYYjkQmRGRC1JcU93NTQ
+                                [https://drive.google.com/open?id=0Bz-I92ggYYjkQmRGRC1JcU93NTQ](Link URL)
 
                                 
 
@@ -86,12 +82,13 @@ Implementacion
 
 
 
--   **Instalar Librerias**
+-   **Apollo Broker**
 
 Realmente para instalar las librerias requeridas no se hace falta sino
 realmente el JDK, favor descargar el zip con el Apollo descomprimirlo y
 ejecutarlo por consola…
 
+ **Instalar Librerias**
 ¿Como instalar el broker?
 
 Para instalar el broker hay que
@@ -113,7 +110,27 @@ e.-ir a la ruta especificada en el dibujo
 de abajo…
 
 d.-abrir una consola de commandos (inicio)![inicio.png](https://bitbucket.org/repo/jLB75o/images/1303404590-inicio.png)
--&gt; todos los programas -&gt; consola de commandos
+> todos los programas > consola de commandos
 
-2.- llamar a la carpeta Apollo, luego desde
-ahi descomprimir el zip, luego desde alli ir a C:\\Apollo
+ **Levantar JMS ApolloMQ**
+
+Con la consola de comandos (en windows) abierto ejecutar: 
+```
+#!bash
+
+C:\Apollo\Agente02\bin\apollo-broker.cmd run
+```
+
+Luego si hemos serviciado nuestra BD no-relacional tipo documento MongoDB, simplemente llamar mongo con el comando 
+```
+#!bash
+
+mongo
+```
+ y verificar que la base de datos fieldvision_demo, con el comando: 
+```
+#!bash
+
+show databases;
+```
+De lo contrario favor ir a confluence y descargar el siguiente archivo [https://dev-datatraffic.atlassian.net/wiki/download/attachments/34570243/fieldvision_demo.tar.gz?api=v2 ](Link URL)(verificar si se tienen los permisos necesarios), si no se tienen permisos prontamente se añadiran a este repositorio todos los archivos necesarios (para levantar la aplicacion se necesitan una serie de pasos en los cuales se pueden encontrar en[ https://dev-datatraffic.atlassian.net/wiki/display/SUP/Herramientas+ETL+con+Pentaho+Data+Integratio](Link URL)n)
