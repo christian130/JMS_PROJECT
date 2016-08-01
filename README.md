@@ -109,16 +109,13 @@ c.- copiar el archivo zip descargado con el nombre apolloProducer.zip a
 nuestra carpeta recien creada
 
 d.- Click derecho “extraer aqui”/extract here
-
 ![](media/image1.png){width="1.28125in"
 height="0.2916666666666667in"}![](media/image2.png){width="0.3854166666666667in"
 height="0.3958333333333333in"}![inicio.png](https://bitbucket.org/repo/jLB75o/images/3784746430-inicio.png)e.-ir a la ruta especificada en el dibujo
 de abajo…
 
-![](media/image3.png){width="1.4166666666666667in"
-height="0.5208333333333334in"}d.-abrir una consola de commandos (inicio)
+d.-abrir una consola de commandos (inicio)
 -&gt; todos los programas -&gt; consola de commandos
 
-![](media/image4.png){width="6.697916666666667in"
-height="4.291666666666667in"}2.- llamar a la carpeta Apollo, luego desde
+2.- llamar a la carpeta Apollo, luego desde
 ahi descomprimir el zip, luego desde alli ir a C:\\Apollo
