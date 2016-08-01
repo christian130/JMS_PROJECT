@@ -11,9 +11,11 @@
 
  **2** **Instalar Librerías**           **3** 
   
-[*Apollo Broker*] 
+[*Apollo Broker*]  
 
-[*Levantar la aplicación*]
+[*Levantar JMS ApolloMQ*] (ejecucion
+
+[*Compilar Fuentes*]
   ------------------- ---------------------------------- ---------------------------------------------------------------------------------------------------------------------------- ---
 
   -- -- --
@@ -109,7 +111,7 @@ de abajo…
 d.-abrir una consola de commandos (inicio)![inicio.png](https://bitbucket.org/repo/jLB75o/images/1303404590-inicio.png)
 > todos los programas > consola de commandos
 
- **Levantar la aplicación**
+ **Levantar JMS ApolloMQ**
 
 Con la consola de comandos (en windows) abierto ejecutar: 
 ```
