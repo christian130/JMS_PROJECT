@@ -1,0 +1,192 @@
+commit a540c82d197c9dacd819d7451a63bcf6692dfabf
+Author: Christian Vivas Santiago <christian.vivas@talentofreelance.com>
+Date:   Mon Aug 1 15:30:39 2016 +0000
+
+    README.md edited online with Bitbucket
+
+commit cb3aa26db61cdf36edb168e4c513323b39224312
+Author: Christian Vivas Santiago <christian.vivas@talentofreelance.com>
+Date:   Mon Aug 1 15:29:34 2016 +0000
+
+    README.md edited online with Bitbucket
+
+commit 8598f3c0c075e8b61826fb2a05cf9bd7a1159d64
+Author: Christian Vivas Santiago <christian.vivas@talentofreelance.com>
+Date:   Mon Aug 1 15:28:36 2016 +0000
+
+    README.md edited online with Bitbucket
+
+commit 9d913f0705508017fabdb9c6cc4bdfd256ac0ba5
+Author: Christian Vivas Santiago <christian.vivas@talentofreelance.com>
+Date:   Mon Aug 1 15:28:03 2016 +0000
+
+    README.md edited online with Bitbucket
+
+commit 610737f092252e4ea2e7adcd9731bf77c7c09834
+Author: Christian Vivas Santiago <christian.vivas@talentofreelance.com>
+Date:   Mon Aug 1 15:24:39 2016 +0000
+
+    README.md edited online with Bitbucket
+
+commit 9f8bb0ba3a4df3c5a587232638b9ff6a3a121bda
+Author: Christian Vivas Santiago <christian.vivas@talentofreelance.com>
+Date:   Mon Aug 1 15:21:44 2016 +0000
+
+    README.md edited online with Bitbucket
+
+commit 3124c85776f075e362ce9d7bcc2756f62aaaeb68
+Author: Christian Vivas Santiago <christian.vivas@talentofreelance.com>
+Date:   Mon Aug 1 15:12:47 2016 +0000
+
+    README.md edited online with Bitbucket
+
+commit cb7d3669578cbc5016aab962e7cc7782d8cb55d2
+Author: Christian Vivas Santiago <christian.vivas@talentofreelance.com>
+Date:   Mon Aug 1 15:12:20 2016 +0000
+
+    README.md edited online with Bitbucket
+
+commit a5c2233442e708d4208beddd5aa2becc86cc592b
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Mon Aug 1 11:11:13 2016 -0400
+
+    README.md reparaired
+
+commit fc055f1ef3bbe2d4d50c51e82f948ae80d9e5524
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Mon Aug 1 11:10:18 2016 -0400
+
+    README.md
+
+commit 0db52375902d03e523a9807bc8fb46777ad35ea2
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Mon Aug 1 11:06:34 2016 -0400
+
+    README.MD
+
+commit a4c4aa69c64636e8c87e1cc067d82acf142cab95
+Merge: acefb21 f5b4eb8
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Mon Aug 1 11:02:27 2016 -0400
+
+    Merge branch 'master' of https://bitbucket.org/dev_datatraffic/fieldvision_etl
+
+commit f5b4eb8f8534730d2c1ba88fae84a62c0712dcda
+Author: Christian Vivas Santiago <christian.vivas@talentofreelance.com>
+Date:   Mon Aug 1 15:01:51 2016 +0000
+
+    README.md edited online with Bitbucket
+
+commit acefb212fb3429e0ca5dd4d677935db11e318877
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Mon Aug 1 11:00:44 2016 -0400
+
+    agregado del README
+
+commit 69acd6e5bbbc9a949e8e9c68a5928f50437ead61
+Author: Christian Vivas Santiago <christian.vivas@talentofreelance.com>
+Date:   Mon Aug 1 14:23:06 2016 +0000
+
+    README.md edited online with Bitbucket
+
+commit 0e1916e2da87fa127c40f31c1d0ce9cf8c0e9f04
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Mon Aug 1 10:11:09 2016 -0400
+
+    transformacion a tarea usando PDI (Pentaho Data Integration), basicamente es como un archivo WORD, un docx
+
+commit 5543f60c40f5d4805990eecedb3c4456011ecadf
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Fri Jul 29 20:21:50 2016 -0400
+
+    arreglando el pom
+
+commit e8689ed8c2147bbe9d7972258678903eff1a8eef
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Fri Jul 29 20:19:27 2016 -0400
+
+    correcion del pom... en una version anterior
+
+commit a6a04a4b27740f10bcd080a8e75399e12a845363
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Fri Jul 29 14:35:48 2016 -0400
+
+    comandos varios
+
+commit 62a0f1f478720fd9fb8c65f05cb3fdb3ebd2ef85
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Fri Jul 29 14:34:08 2016 -0400
+
+    .
+
+commit b91f2c2e8a2a672687a927b28919b9dddc4b7ba8
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Fri Jul 29 09:34:40 2016 -0400
+
+    comando general para crear el proyecto: mvn -Dmaven.test.skip=true clean install ... el plugin eclipse:eclipse no ha sido mantenido desde 2014 por lo tanto el sucesor en la misma pagina es m2e una implementacion dentro de eclipse... click derecho maven -> update project... para crear el proyecto tambien se puede hacer y es mas factible desde eclipse maven -> create project from source y ahi se construye el proyecto con el .classpath y todo lo demas
+
+commit b7cfd22e86cb9c72fbeaa5c1779a7bccef7141cc
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Fri Jul 29 08:15:49 2016 -0400
+
+    agregado el multithreading segun lo recomendado, esperando ordenes para su correcta evaluacion, postdata: ahora los metodos todos son runnable retornan runnable... con este feature puedo llamar ambos el enviador a la cola, y el consumidor... DESDE UN MAIN ambos al mismo tiempo
+
+commit fbc914be18fdeb9ab897b3cd8af2a8a3ed6a5e59
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Thu Jul 28 17:44:05 2016 -0400
+
+    eliminado del proyecto la carpeta target, el archivo .classpath y el .project y tambien el .springBeans
+
+commit 2e800cedb5a1912bb551d4e1ee19774f38b3d2e0
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Thu Jul 28 17:36:39 2016 -0400
+
+    añadido del empaquetado jar simplemente lanzar con doble click  o por consola , favor eliminar los target... prontamente se añadiran en el gitignore esta carpeta... gracias
+
+commit 6abe6ef788968b1333402abaf35ac02a63e134ea
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Thu Jul 28 17:30:22 2016 -0400
+
+    nuevo commmit con la clase inicializadora y la implementacion de runnable... y los threads...
+
+commit 73be5e3b556c027e12d62f008ce3e77ed64edf4b
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Thu Jul 28 09:49:05 2016 -0400
+
+    favor eliminar todo lo que esta adentro de target con mvn clean y esquipear las pruebas Junit tambien con -Dmaven.test.skip=true... comando general para compilar el proyecto mvn -Dmaven.test.skip=true clean install
+
+commit fdc65c952eed0164cf833ff83295dff8216b554c
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Wed Jul 27 21:37:39 2016 -0400
+
+    multi hilos con pool y anotaciones via autowired totalmente spring
+
+commit 163891c984c3f1cf06eeeec53a687f99c05b66e1
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Wed Jul 27 19:14:02 2016 -0400
+
+    y con esto se arregla el tema de los hilos...
+
+commit 77d11280e1929ee2d084a1b5f7b84ac391e4a6d5
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Wed Jul 27 18:40:58 2016 -0400
+
+    se agregan los hilos a la aplicacion...
+
+commit 62dc68320fb41d688932c8b70edbb75d7097847a
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Wed Jul 27 18:30:02 2016 -0400
+
+    se agregan los hilos a la aplicacion...
+
+commit c9d8575cdc48671dc2f878f7a960418f0b99282e
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Wed Jul 27 16:58:43 2016 -0400
+
+    second commit of the day
+
+commit 098038452bf5e680d6cee5e4626c8fca7003b861
+Author: Christian Vivas Santiago <christian130@gmail.com>
+Date:   Wed Jul 27 15:39:50 2016 -0400
+
+    in this first commit i'm commiting the working version... STABLE
