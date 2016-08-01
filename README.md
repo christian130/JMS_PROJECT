@@ -112,7 +112,7 @@ d.- Click derecho “extraer aqui”/extract here
 
 ![](media/image1.png){width="1.28125in"
 height="0.2916666666666667in"}![](media/image2.png){width="0.3854166666666667in"
-height="0.3958333333333333in"}e.-ir a la ruta especificada en el dibujo
+height="0.3958333333333333in"}![inicio.png](https://bitbucket.org/repo/jLB75o/images/3784746430-inicio.png)e.-ir a la ruta especificada en el dibujo
 de abajo…
 
 ![](media/image3.png){width="1.4166666666666667in"
